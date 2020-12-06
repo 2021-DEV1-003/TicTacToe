@@ -50,4 +50,7 @@ $ java -jar target/tic-tac-toe.jar
 Open your browser and type http://"IP Address":8080 to view user interface of the game and follow instructions.
 
 Here "IP Address" is IP address of the sever where the application is deployed.
- 
+
+Make sure JDK 8 or higher is installed.
+
+Make sure Maven 3.6.3 or higher is installed.
