@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 
 public class GameInitializerTest {
@@ -108,6 +109,27 @@ public class GameInitializerTest {
 		// if grid.size() is 1, assetEquals is true. The test passes
 		// else the test failed
 		assertEquals(1, grid.size());
+
+	}
+
+	/**
+	 * This test method is for testing generateGrid method in GameInitializer class.
+	 *
+	 */
+	@Test
+	public void testCreateGridWithDynamicValues() {
+
+		// Declare and initialize GameInitializer variable
+		GameInitializer gameInitializer=new GameInitializer();
+
+		// Declare and initialize int variable that represent the number of cells(cols). Here variable set to 0
+		int square=3;
+
+		// Declare and initialize Map variable that represent the game grid to hold played value
+		// Call generateGrid method from GameInitializer class to get the game grid
+		Map<String, List<String>> grid = gameInitializer.generateGrid(square);
+
+		assertEquals(square, grid.size());
 
 
 	}
