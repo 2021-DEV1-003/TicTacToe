@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Tic Tac Toe</title>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+
+<!-- <link rel="stylesheet" href="../static/css/shards.min.css" -->
+<!-- 	th:href="@{css/shards.min.css}"> -->
+<link rel="stylesheet" href="../static/css/style.css"
+	th:href="@{css/style.css}">
+</head>
+<body>
+
+	<div class="center">
+
+		<!--WELCOME MESSAGE -->
+		<h1>
+			<span th:text="${welcome_msg}"></span>
+		</h1>
+
+		<!--If no player wins, this display a message indicating which user has to play -->
+		<div th:if="!${win}">
+			<div th:if="!${game_draw}">
+			<p class="current_player" th:text="${currentPlayer}"></p>
+			</div>
+			
+		</div>
+
+		<!--If a player wins, display bravo message -->
+		<p class="current_player win_msg" th:if="${win}">
+			<span th:text="${winner_msg}"></span>
+		</p>
+
+		<!--If the game is draw, display no player wins -->
+		<p class="current_player draw_msg" th:if="${game_draw}">
+			<span th:text="${draw_msg}"></span>
+		</p>
+
+		<div class="container">
+			<div class="row">
+				<div class="col align-self-start"></div>
+
+				<div class="col-lg-6 col-md-12 align-self-center">
+					<table class="table table-bordered  center_table">
+						<tbody>
+							<!--If a player wins, display bravo message -->
+							<tr th:each="entry, stats : ${grids}"
+								th:with="row=${entry.value}">
+								<td th:each="grid : ${row}">
+
+									<div class="content">
+
+										<span th:if="!${win}"> <a class="content play_value"
+											style="height: 100%" th:text="${grid.value}"
+											th:href="@{/playing(row=${grid.rowNum},col=${grid.colNum})}"></a>
+										</span> <span th:if="${win}"> <a class="content play_value"
+											style="height: 100%" th:text="${grid.value}"></a>
+										</span>
+									</div>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br> <br>
+					<!--A button used to reset the game. -->
+					<a class="btn btn-sm reset_btn" th:href="${'/'}">Reset</a>
+				</div>
+
+				<div class="col align-self-end">
+					<!-- 		      One of three columns -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
