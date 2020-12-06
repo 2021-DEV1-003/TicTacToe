@@ -5,15 +5,12 @@ This application is a Spring Boot MVC application. It was developed as Maven Pro
 
 ## Prerequisites
 
-1. Make sure [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) is installed.
+1. Make sure JDK 8 or higher is installed.
 
-2. Make sure [Maven](https://maven.apache.org/install.html) is installed.
+2. Make sure Maven 3.6.3 or higher is installed.
 
 3. Make sure [Git](https://git-scm.com) is installed.
 
-4. Make sure JDK 8 or higher is installed.
-
-5. Make sure Maven 3.6.3 or higher is installed.
 
 ## Port Configuration
 
