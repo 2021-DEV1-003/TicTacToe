@@ -10,6 +10,7 @@ td:after {
   content: '';
   display: block;
   margin-top: 100%;
+
 }
 td .content {
   position: absolute;
@@ -60,4 +61,5 @@ td .content {
 
 .draw_msg{
 	color: red;
+
 }
