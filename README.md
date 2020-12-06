@@ -11,6 +11,10 @@ This application is a Spring Boot MVC application. It was developed as Maven Pro
 
 3. Make sure [Git](https://git-scm.com) is installed.
 
+4. Make sure JDK 8 or higher is installed.
+
+5. Make sure Maven 3.6.3 or higher is installed.
+
 ## Port Configuration
 
 The application is running on port 8080. It is configured in the file '/tic-tac-toe/src/main/resources/application.properties' and can be changed here before clone.
@@ -51,6 +55,3 @@ Open your browser and type http://"IP Address":8080 to view user interface of th
 
 Here "IP Address" is IP address of the sever where the application is deployed.
 
-Make sure JDK 8 or higher is installed.
-
-Make sure Maven 3.6.3 or higher is installed.
